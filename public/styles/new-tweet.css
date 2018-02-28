@@ -1,3 +1,5 @@
+/* ---------- Creation of tweets CSS layout ---------- */
+
 .new-tweet {
   border: 3px hidden;
   border-radius: 10px 10px 10px 10px;
@@ -8,38 +10,112 @@
   padding-right: 10px;
 }
 
-h2 {
+.new-tweet h2 {
   margin-top: 5px;
   margin-bottom: 15px
 }
 
-h2:after
-{
-    content: ' ';
-    display: block;
-    border: 0.5px solid;
+.new-tweet h2:after {
+  border: 0.5px solid;
+  content: ' ';
+  display: block;
 }
 
-textarea {
-  padding-left: 5px;
-  width: 348.992188px;
-  padding-top: 5px;
+.new-tweet textarea {
   padding-bottom: 5px;
-  padding-right: 5px;
-}
-
-input {
-  padding-top: 2px;
   padding-left: 5px;
-  padding-bottom: 2px;
   padding-right: 5px;
+  padding-top: 5px;
+  width: 348.992188px;
 }
 
-span.counter {
+.new-tweet input {
+  padding-bottom: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+}
+
+.new-tweet span.counter {
+  float: right;
   padding-right: 2px;
   padding-top: 2px;
-  float: right;
 }
 
+.new-tweet span.red {
+  color: red;
+}
+
+
+/* ---------- Newly created tweets CSS layout ---------- */
+
+article.tweet {
+    opacity: 0.8;
+    border-radius: 10px;
+    border: 1px solid #CCCCCC;
+    z-index: 2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+article.tweet:hover{
+    opacity: 1.0;
+}
+
+article.tweet header {
+    background-color: #e6e6e6;
+    border-radius: 10px 10px 0 0;
+}
+
+.clearfix {
+    clear:both;
+}
+
+article.tweet header img{
+    width: 20%;
+    height: 20%;
+    border-radius: 10px;
+    margin: 2%;
+    float:left;
+}
+
+article.tweet header h1{
+    padding-top: 1%;
+    width: 50%;
+    float:left;
+    margin: 0;
+    color: black;
+    font-size: 2.25em;
+}
+
+article.tweet header p{
+    float: right;
+    padding-top: 3%;
+    border-radius: 10px;
+    margin: 2%;
+}
+
+article.tweet main {
+    padding: 0;
+    width: 100%;
+    margin: 10% 0 10% 0;
+    border-radius: 10px 10px 0 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+article.tweet main p{
+    margin: 0;
+    padding: 3%;
+    font-size: 1.2em;
+}
+article.tweet footer {
+    margin: 0;
+    border-top: 1px solid #EEEEEE;
+    border-radius: 0 0 10px 10px;
+}
+
+article.tweet footer p{
+    margin: 2%;
+}
 
 
