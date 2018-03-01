@@ -63,11 +63,11 @@ $(document).ready(function() {
     event.preventDefault();
     // Get the data from the form
     const data = $(".new-tweet form").serialize();
-    // Checks if empty or with more then 140 characters and alert the user (145 because of the 'text=' that exist in the data)
+    // Checks if empty or with more than 140 characters and alert the user (145 because of the 'text=' that exist in the data)
     if (data === "text=") {
-      alert(`Sorry! You can't submit a empty tweet!`);
+      alert(`Sorry! You can't submit an empty tweet!`);
     } else if (data.length > 145) {
-      alert(`Sorry! You can't submit a tweet with more the 140 characters!`);
+      alert(`Sorry! You can't submit a tweet with more than 140 characters!`);
     } else {
 
       // Submit using AJAX
