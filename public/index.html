@@ -2,29 +2,20 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-
-    <!-- Roboto condensed font -->
+    <!-- External Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
 
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
-
-    <!-- FONT -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
-    <!-- Character counter -->
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
   </head>
 
@@ -32,10 +23,9 @@
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
-
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
-
+      <button><i class="far fa-edit"></i> Compose</button>
     </nav>
 
     <!-- Page-specific (main) content here -->
@@ -43,38 +33,26 @@
 
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form action="/tweets" method="POST">
+        <form method="POST" action="/tweets/">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
 
-
-      <!-- New tweets section here -->
       <section id="tweets-container">
-
-        <article class="tweet">
-          <header>
-            <img alt="avatar" src="https://is1-ssl.mzstatic.com/image/thumb/Purple111/v4/ec/13/72/ec137292-f2be-9f55-3be7-bbdffb73f49a/mzl.vrvgkxus.png/1200x630bb.jpg">
-            <h1>Mario</h1>
-            <p>@user</p>
-            <div class="clearfix"></div>
-          </header>
-          <main>
-            <p>
-              What is Lorem Ipsum?
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-          </main>
-          <footer>
-            <p>16,911 days ago</p>
-          </footer>
-        </article>
-
+        <!-- Rendering of tweets-->
       </section>
-      <!-- End of new tweets section -->
 
     </main>
+
+    <!-- External JS -->
+    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </body>
 </html>
