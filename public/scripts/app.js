@@ -5,6 +5,18 @@
  */
 
 $(document).ready(function() {
+
+  //Returns how many days ago the tweet was created
+  function daysAgo(time) {
+    const currentDate = Date.now();
+    const currentTime = currentDate - time;
+    const millisecond = (24 * 60 * 60 * 1000)
+    const daysAgo = Math.round(Math.abs(currentTime / millisecond));
+
+    return daysAgo.toLocaleString();
+  }
+
+
   // Creates each tweet and return to be rendered into the site
   function createTweetElement(tweetObj) {
     const $tweet = $("<article>").addClass("tweet");
@@ -19,11 +31,12 @@ $(document).ready(function() {
     $header.append(`<div class="clearfix"></div>`);
 
     const $main = $("<main>");
-    let $mainContent = $("<p>").text(tweetObj.content.text);
+    const $mainContent = $("<p>").text(tweetObj.content.text);
     $main.append($mainContent);
 
     const $footer = $("<footer>");
-    const $date = $("<p>").text(`${tweetObj.created_at} day(s) ago`);
+    const days = daysAgo(tweetObj.created_at);
+    const $date = $("<p>").text(`${days} day(s) ago`);
     $footer.append($date);
 
     // Add icons
@@ -63,7 +76,7 @@ $(document).ready(function() {
     event.preventDefault();
     // Get the data from the form
     const data = $(".new-tweet form").serialize();
-    // Checks if empty or with more than 140 characters and alert the user (145 because of the 'text=' that exist in the data)
+    // Checks if empty or with more than 140 characters and alert the user.
     if (data === "text=") {
       alert(`Sorry! You can't submit an empty tweet!`);
     } else if (data.length > 151) {
