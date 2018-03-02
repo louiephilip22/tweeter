@@ -17,7 +17,8 @@
   width: 100%;
 }
 .new-tweet input {
-  font-size: 1.5em;
+  font-size: 1em;
+  padding-top: 2px;
 }
 .counter {
   float: right;
@@ -28,14 +29,10 @@
   clear: both;
 }
 
-.clearfix {
-  clear:both;
-}
-
 /* ----- NEWLY CREATED TWEETS ----- */
 article.tweet {
   border: 1px solid #CCCCCC;
-  border-radius: 10px;
+  border-radius: 4%;
   margin: 1em 2em 1em 2em;
   opacity: 0.85;
   z-index: 2;
@@ -47,7 +44,7 @@ article.tweet:hover{
 
 article.tweet header {
   background-color: #F3F3F3;
-  border-radius: 10px 10px 0 0;
+  border-radius: 8% 8% 0 0;
   width: 382px;
   position: relative;
   left: 1px;
@@ -63,7 +60,7 @@ article.tweet header h1{
 }
 
 article.tweet header img{
-  border-radius: 10px;
+  border-radius: 10%;
   float:left;
   height: 20%;
   margin: 2%;
