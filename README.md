@@ -6,7 +6,14 @@ This is a full stack web application built using HTML, CSS, JS, jQuery and AJAX 
 
 ## Here are some screenshots of the application:
 
+<p align="center">
+  <img src="https://github.com/louiephilip22/tweeter/blob/master/docs/compose%20hidden.png" alt="Sublime's custom image"/>
+</p>
 
+
+<p align="center">
+  <img src="https://github.com/louiephilip22/tweeter/blob/master/docs/compose.png" alt="Sublime's custom image"/>
+</p>
 
 ## Getting Started
 
