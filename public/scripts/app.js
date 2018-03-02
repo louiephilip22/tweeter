@@ -19,7 +19,7 @@ $(document).ready(function() {
     $header.append(`<div class="clearfix"></div>`);
 
     const $main = $("<main>");
-    const $mainContent = $("<p>").text(tweetObj.content.text);
+    let $mainContent = $("<p>").text(tweetObj.content.text);
     $main.append($mainContent);
 
     const $footer = $("<footer>");
@@ -66,7 +66,7 @@ $(document).ready(function() {
     // Checks if empty or with more than 140 characters and alert the user (145 because of the 'text=' that exist in the data)
     if (data === "text=") {
       alert(`Sorry! You can't submit an empty tweet!`);
-    } else if (data.length > 145) {
+    } else if (data.length > 151) {
       alert(`Sorry! You can't submit a tweet with more than 140 characters!`);
     } else {
 

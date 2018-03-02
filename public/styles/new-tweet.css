@@ -87,6 +87,7 @@ article.tweet main p{
   font-size: 1.3em;
   margin: 0;
   padding: 3%;
+  word-wrap: break-word;
 }
 
 article.tweet footer {
